@@ -25,7 +25,7 @@ jobs:
         env:
           api_key: ${{ secrets.api_key }}
           api_secret_key: ${{ secrets.api_secret_key }}
-          access_token: ${{ secrets.TWITTER_API_SECRET }}
-          access_token_secret: ${{ secrets.TWITTER_ACCESS_TOKEN }}
-          gemini_api: ${{ secrets.TWITTER_ACCESS_SECRET }}
+          access_token: ${{ secrets.access_token }}
+          access_token_secret: ${{ secrets.access_token_secret }}
+          gemini_api: ${{ secrets.gemini_api }}
         run: node index.js
