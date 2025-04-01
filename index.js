@@ -18,7 +18,9 @@ const client = twitterClient.readWrite;
 async function postTweet() {
   try {
     const content = await generateTechContent();
-    const tweet = await client.v2.tweet(content);
+    const tweet = await client.v2.tweet(content,{
+      community_id:"1488952693443997701"
+    });
     console.log(content)
     console.log('Tweet posted:', tweet);
   } catch (error) {
