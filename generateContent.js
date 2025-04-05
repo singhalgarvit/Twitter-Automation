@@ -24,11 +24,11 @@ async function generateTechContent() {
   try {
     const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
     
-    const prompt = `${prompts[Math.floor(Math.random() * prompts.length)]} also remember one thing that your response will directly be published on twitter so dont add any cover line for me just give the answer of that is asked.`;
+    const prompt = `${prompts[Math.floor(Math.random() * prompts.length)]} also remember one thing that your response will directly be published on twitter so dont add any cover line for me just give the answer of that is asked.Also the length and style of the tweet will be similar to this account e.g. : https://x.com/Prathkum`;
     
     const result = await model.generateContent(prompt);
     const response = result.response.text();
-
+    console.log(response);
     return response;
   } catch (error) {
     console.error("Error generating content:", error);
